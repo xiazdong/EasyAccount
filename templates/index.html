@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>EasyAccount,您的记账专家</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Bootstrap 101 Template</title>
+	<link href="../css/docs.css" rel="stylesheet">
+	<script src="../js/common/jquery1.10.2.js"></script>
+	<script src="../css/bootstrap/js/bootstrap.min.js"></script>
+	<link href="../css/bootstrap/css/bootstrap.min.css" rel="stylesheet"
+		media="screen">
+	<link href="../css/bootstrap/css/bootstrap-responsive.css"
+		rel="stylesheet" media="screen">
+	<style type="text/css">
+	img{
+		width:100%;
+	}
+	</style>
+	<script type="text/javascript">
+		$(function(){
+			$('.carousel').carousel({
+			  interval: 2000		//每2秒切换一张图片
+			});
+		});
+	</script>
+</head>
+<body>
+	{{include file="nav.html"}}
+	<div id="myCarousel" class="carousel slide">
+		<div class="carousel-inner">
+			<div class="item active">
+				<img src="../css/images/1.jpg">
+			</div>
+			<div class="item ">
+				<img src="../css/images/2.jpg">
+				<div class="container">
+					<div class="carousel-caption" style="height: 20%">
+						<p class="lead">他提供最简洁的账目明细.</p>
+					</div>
+				</div>
+			</div>
+			<div class="item">
+				<img src="../css/images/3.jpg">
+				<div class="container">
+					<div class="carousel-caption" style="height: 20%">
+						<p class="lead">他提供最清晰的报表分析.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<a class="left carousel-control" href="#myCarousel" data-slide="prev">‹</a>
+		<a class="right carousel-control" href="#myCarousel" data-slide="next">›</a>
+	</div>
+	<div class="container">
+		<div style="margin:0 auto;max-width:50%">
+			{{if $ISLOGIN==true}}
+			<a href="showList.php" class="btn btn-large btn-block btn-primary">查看账目</a>
+			{{else}}
+			<a href="register.php" class="btn btn-large btn-block btn-primary">注册</a>
+			{{/if}}
+		</div>
+	</div>
+	{{include file="foot.html"}}
+</body>
+</html>
